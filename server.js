@@ -9,7 +9,7 @@ const keys = require('./Config/key')
 const passport = require('passport')
 
 const port = 6868;
-mongoose.connect("mongodb://localhost/todo-project", (err) => {
+mongoose.connect("mongodb://localhost/todo-project",{useNewUrlParser: true}, (err) => {
     if(err) console.log(err)
     else console.log("DB connect success!");
 });
@@ -20,7 +20,6 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Methods", "PUT, DELETE");
     next();
   });
-  
 const TodoRouter = require('./routers/todoRouter');
 const AuthRouter = require('./routers/auth')
 
