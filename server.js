@@ -8,7 +8,7 @@ const cookieSession = require('cookie-session')
 const keys = require('./Config/key')
 const passport = require('passport')
 
-const port = 6868;
+
 mongoose.connect("mongodb://minhco12:whysoserious1@ds111623.mlab.com:11623/todo-project",{useNewUrlParser: true}, (err) => {
     if(err) console.log(err)
     else console.log("DB connect success!");
@@ -45,6 +45,8 @@ app.get('/', (req,res) => {
 });
 
 
+// const port = process.env.PORT || 6868;
+const port = 6868;
 app.listen(port, (err) => {
     if(err){
         console.log(err);
