@@ -9,7 +9,7 @@ const keys = require('./Config/key')
 const passport = require('passport')
 
 const port = 6868;
-mongoose.connect("mongodb://localhost/todo-project",{useNewUrlParser: true}, (err) => {
+mongoose.connect("mongodb://minhco12:whysoserious1@ds111623.mlab.com:11623/todo-project",{useNewUrlParser: true}, (err) => {
     if(err) console.log(err)
     else console.log("DB connect success!");
 });
