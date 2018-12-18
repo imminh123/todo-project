@@ -45,8 +45,8 @@ app.get('/', (req,res) => {
 });
 
 
-// const port = process.env.PORT || 6868;
-const port = 6868;
+const port = process.env.PORT || 6868;
+// const port = 6868;
 app.listen(port, (err) => {
     if(err){
         console.log(err);
