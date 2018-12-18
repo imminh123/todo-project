@@ -12,7 +12,7 @@ const port = 6868;
 mongoose.connect("mongodb://minhco12:whysoserious1@ds111623.mlab.com:11623/todo-project",{useNewUrlParser: true}, (err) => {
     if(err) console.log(err)
     else console.log("DB connect success!");
-});
+}); //add user to mlab
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
